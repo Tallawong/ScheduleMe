@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="scheduleme.client/scheduleme.client-eproj.esproj">
+    <Build />
+    <Deploy />
+  </Project>
+  <Project Path="scheduleme.server/scheduleme.server.csproj" />
+</Solution>

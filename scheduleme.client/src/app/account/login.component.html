@@ -1,0 +1,49 @@
+<div class="card m-3">
+  <h4 class="card-header">Login</h4>
+  <div class="card-body">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input
+          type="text"
+          formControlName="email"
+          class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f['email'].errors }"
+        />
+        @if (submitted && f['email'].errors) {
+          <div class="invalid-feedback">Email is required</div>
+        }
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input
+          type="password"
+          formControlName="password"
+          class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f['password'].errors }"
+        />
+        @if (submitted && f['password'].errors) {
+          <div class="invalid-feedback">Password is required</div>
+        }
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Date of Birth</label>
+        <input
+          type="date"
+          formControlName="dob"
+          class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f['dob'].errors }"
+        />
+        @if (submitted && f['dob'].errors) {
+          <div class="invalid-feedback">Date of birth is required</div>
+        }
+      </div>
+      <button [disabled]="loading" class="btn btn-primary">
+        @if (loading) {
+          <span class="spinner-border spinner-border-sm me-1"></span>
+        }
+        Login
+      </button>
+    </form>
+  </div>
+</div>
