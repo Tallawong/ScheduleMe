@@ -1,12 +1,12 @@
 ﻿import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 import { Router, NavigationStart } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { Alert, AlertType } from '../../../schedule-models';
+import { Alert, AlertType } from '../../../entities';
 import { AlertService } from '../../../services';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
-//import { Alert, AlertType } from '@app/schedule-models';
+//import { Alert, AlertType } from '@app/entities';
 //import { AlertService } from '@app/_services';
 
 @Component({

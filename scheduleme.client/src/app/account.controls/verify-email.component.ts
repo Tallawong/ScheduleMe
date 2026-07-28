@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 //import { UserService } from '../services/user.service';
-import { VerifyEmailRequest } from '../requests/verify-email-request';
+import { VerifyEmailRequest } from '../dto/requests/verify-email-request';
 import { AccountModalService } from './account-modal.service';
 import { AccountService } from '../services';
 

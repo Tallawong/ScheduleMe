@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 //import { UserService } from '../services/user.service';
-import { ResetPasswordRequest } from '../requests/reset-password-request';
-import { HonorificsComponent } from '../controls/honorifics/honorifics.component';
+import { ResetPasswordRequest } from '../dto/requests/reset-password-request';
+import { HonorificsComponent } from '../core/controls/honorifics/honorifics.component';
 import { AccountService } from '../services';
 
 @Component({

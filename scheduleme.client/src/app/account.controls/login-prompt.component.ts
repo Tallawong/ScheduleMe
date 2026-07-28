@@ -11,7 +11,7 @@ import {
 
 import { FormsModule } from '@angular/forms';
 import { MfaDialogComponent } from './mfa-dialog.component';
-import { LoginRequest } from '../requests/login-request';
+import { LoginRequest } from '../dto/requests/login-request';
 import { Router } from '@angular/router';
 //import { UserService } from '../services/user.service';
 import { AccountModalService } from './account-modal.service';

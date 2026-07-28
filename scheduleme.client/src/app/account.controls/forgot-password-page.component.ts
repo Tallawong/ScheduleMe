@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ForgotPasswordComponent } from './forgot-password.component';
-import { ForgotPasswordRequest } from '../requests/forgot-password-request';
+import { ForgotPasswordRequest } from '../dto/requests/forgot-password-request';
 import { AccountService } from '../services';
 
 @Component({

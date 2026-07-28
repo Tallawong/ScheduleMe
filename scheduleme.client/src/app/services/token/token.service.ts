@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 //import { parseJwtPayload } from '../helpers/jwt.utils';
 //import { TokenResponse } from '../responses/token-response';
 import { parseJwtPayload } from '../../core/helpers/jwt.utils';
-import { TokenResponse } from '../../responses/token-response';
+import { TokenResponse } from '../../dto/responses/token-response';
 
 @Injectable({
   providedIn: 'root',

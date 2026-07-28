@@ -4,21 +4,21 @@ import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 
 //import { UserService } from '../services/user.service';
-import { RegisterRequest } from '../requests/register-request';
+import { RegisterRequest } from '../dto/requests/register-request';
 import { AccountModalService } from './account-modal.service';
-import { EmailAndDobComponent } from '../controls/email-dob/email-dob.component';
-import { FirstLastComponent } from '../controls/first-last/first-last.component';
-import { HonorificsComponent, HonorificsData } from '../controls/honorifics/honorifics.component';
-import { PasswordComponent } from '../controls/password/password.component';
-import { MobileNumberComponent } from '../controls/mobile-number/mobile-number.component';
-import { RegistrationFormComponent } from '../controls/registration-form/registration-form.component';
-import { AcceptTermsComponent } from '../controls/accept-terms/accept-terms.component';
+import { EmailAndDobComponent } from '../core/controls/email-dob/email-dob.component';
+import { FirstLastComponent } from '../core/controls/first-last/first-last.component';
+import { HonorificsComponent, HonorificsData } from '../core/controls/honorifics/honorifics.component';
+import { PasswordComponent } from '../core/controls/password/password.component';
+import { MobileNumberComponent } from '../core/controls/mobile-number/mobile-number.component';
+import { RegistrationFormComponent } from '../core/controls/registration-form/registration-form.component';
+import { AcceptTermsComponent } from '../core/controls/accept-terms/accept-terms.component';
 import { A11yModule } from '@angular/cdk/a11y';
-import { FirstLast } from '../controls/first-last/first-last.model';
-import { EmailAndDob } from '../controls/email-dob/email-dob.model';
-import { PasswordConfirm } from '../controls/password/password.model';
-import { MobileNumber } from '../controls/mobile-number/mobile-number.model';
-import { AcceptTerms } from '../controls/accept-terms/accept-terms.model';
+import { FirstLast } from '../core/controls/first-last/first-last.model';
+import { EmailAndDob } from '../core/controls/email-dob/email-dob.model';
+import { PasswordConfirm } from '../core/controls/password/password.model';
+import { MobileNumber } from '../core/controls/mobile-number/mobile-number.model';
+import { AcceptTerms } from '../core/controls/accept-terms/accept-terms.model';
 import { AccountService } from '../services';
 
 export interface RegisterPayload

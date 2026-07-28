@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './home';
+import { HomeComponent } from './core/controls/home';
 import { AuthGuard } from './core/helpers';
 
 // const adminModule = () => import('./admin/admin.module').then((x) => x.AdminModule);

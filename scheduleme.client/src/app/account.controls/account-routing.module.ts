@@ -7,7 +7,7 @@ import { VerifyEmailComponent } from './verify-email.component';
 import { ForgotPasswordComponent } from './forgot-password.component';
 import { ResetPasswordComponent } from './reset-password.component';
 import { ForgotPasswordMatComponent } from './forgot-password-mat.component';
-import { RegistrationFormComponent } from '../controls/registration-form/registration-form.component';
+import { RegistrationFormComponent } from '../core/controls/registration-form/registration-form.component';
 
 const routes: Routes = [
   {
