@@ -1,5 +1,5 @@
 <Solution>
-  <Project Path="scheduleme.client/scheduleme.client-eproj.esproj">
+  <Project Path="scheduleme.client/scheduleme.client.esproj">
     <Build />
     <Deploy />
   </Project>

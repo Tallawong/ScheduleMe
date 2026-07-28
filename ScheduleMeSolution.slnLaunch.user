@@ -7,7 +7,7 @@
         "Action": "Start"
       },
       {
-        "Path": "scheduleme.client\\scheduleme.client-eproj.esproj",
+        "Path": "scheduleme.client\\scheduleme.client.esproj",
         "Action": "Start"
       }
     ]
