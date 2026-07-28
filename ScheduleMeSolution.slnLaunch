@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "scheduleme.server\\scheduleme.server.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "scheduleme.client\\scheduleme.client.esproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
