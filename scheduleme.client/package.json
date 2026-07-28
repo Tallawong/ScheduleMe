@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --host=parish.api",
-    "start:dev": "ng serve --host=rejkid.api --ssl --ssl-cert \"./ssl/cert-from-pfx.pem\" --ssl-key \"./ssl/key-from-pfx.pem\" --configuration development --port 4201",
+    "start:dev": "ng serve --host=rejkid.api --ssl --ssl-cert \"./ssl/cert-from-pfx.pem\" --ssl-key \"./ssl/key-from-pfx.pem\" --configuration development --port 4200",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"

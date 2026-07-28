@@ -6,7 +6,7 @@
   "name": "ng serve",
   "type": "chrome",
   "request": "launch",
-  "url": "https://rejkid.api:4201/",
+  "url": "https://rejkid.api:4200/",
   "preLaunchTask": "npm: start:dev"
 }</LaunchJsonTarget>
   </PropertyGroup>
