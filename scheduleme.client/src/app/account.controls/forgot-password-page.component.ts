@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ForgotPasswordComponent } from './forgot-password.component';
 import { ForgotPasswordRequest } from '../requests/forgot-password-request';
-import { AccountService } from '../_services';
+import { AccountService } from '../services';
 
 @Component({
   standalone: true,

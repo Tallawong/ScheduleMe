@@ -3,7 +3,7 @@ import { HttpRequest, HttpHandler, HttpEvent, HttpInterceptor, HttpContextToken,
 import { EMPTY, Observable, of, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
-import { AccountService } from '../_services';
+import { AccountService } from '../../services';
 
 @Injectable()
 export class ErrorInterceptor implements HttpInterceptor {

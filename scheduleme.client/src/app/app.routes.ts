@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './home';
-import { AuthGuard } from './_helpers';
+import { AuthGuard } from './core/helpers';
 
 // const adminModule = () => import('./admin/admin.module').then((x) => x.AdminModule);
 // const profileModule = () => import('./profile/profile.module').then((x) => x.ProfileModule);

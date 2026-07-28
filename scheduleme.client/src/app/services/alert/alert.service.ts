@@ -2,7 +2,7 @@
 import { Observable, Subject } from 'rxjs';
 import { filter } from 'rxjs/operators';
 
-import { Alert, AlertType } from '../_models';
+import { Alert, AlertType } from '../../schedule-models';
 import { ViewportScroller } from '@angular/common';
 
 @Injectable({ providedIn: 'root' })

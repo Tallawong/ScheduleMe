@@ -16,7 +16,7 @@ import { Router } from '@angular/router';
 //import { UserService } from '../services/user.service';
 import { AccountModalService } from './account-modal.service';
 import { Subscription, finalize } from 'rxjs';
-import { AccountService } from '../_services';
+import { AccountService } from '../services';
 
 @Component({
   standalone: true,

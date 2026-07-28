@@ -2,8 +2,8 @@
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { finalize, first } from 'rxjs/operators';
 //import { AccountService, AlertService } from '../_services';
-import { Constants } from '../_helpers/constants';
-import { TimeHandler } from '../_helpers/time.handler';
+import { Constants } from '../core/helpers/constants';
+import { TimeHandler } from '../core/helpers/time.handler';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';

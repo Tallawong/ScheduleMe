@@ -14,7 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { RegisterRequest } from '../../requests/register-request';
 //import { UserService } from '../../services/user.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AccountService } from '../../_services';
+import { AccountService } from '../../services';
 import { AccountModalService } from '../../account.controls/account-modal.service';
 //import { AccountModalService } from '../../account/account-modal.service';
 

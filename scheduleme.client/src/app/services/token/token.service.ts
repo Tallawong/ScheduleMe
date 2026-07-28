@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 //import { parseJwtPayload } from '../helpers/jwt.utils';
 //import { TokenResponse } from '../responses/token-response';
-import { parseJwtPayload } from '../_helpers/jwt.utils';
-import { TokenResponse } from '../responses/token-response';
+import { parseJwtPayload } from '../../core/helpers/jwt.utils';
+import { TokenResponse } from '../../responses/token-response';
 
 @Injectable({
   providedIn: 'root',

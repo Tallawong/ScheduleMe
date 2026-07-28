@@ -6,8 +6,8 @@
       "name": "ng serve",
       "type": "chrome",
       "request": "launch",
-      "preLaunchTask": "npm: start",
-      "url": "http://parish.api:4200/"
+      "preLaunchTask": "npm: start:dev",
+      "url": "https://rejkid.api:4201/"
     },
     {
       "name": "ng test",

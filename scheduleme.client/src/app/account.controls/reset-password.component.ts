@@ -5,7 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 //import { UserService } from '../services/user.service';
 import { ResetPasswordRequest } from '../requests/reset-password-request';
 import { HonorificsComponent } from '../controls/honorifics/honorifics.component';
-import { AccountService } from '../_services';
+import { AccountService } from '../services';
 
 @Component({
   standalone: true,

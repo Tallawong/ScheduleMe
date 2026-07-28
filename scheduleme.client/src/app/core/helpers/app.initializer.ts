@@ -1,6 +1,6 @@
 import { TeardownLogic } from 'rxjs';
 //import { environment } from 'src/environments/environment';
-import { AccountService } from '../_services';
+import { AccountService } from '../../services';
 
 export function appInitializer(accountService: AccountService) {
   return () =>

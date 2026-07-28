@@ -19,7 +19,7 @@ import { EmailAndDob } from '../controls/email-dob/email-dob.model';
 import { PasswordConfirm } from '../controls/password/password.model';
 import { MobileNumber } from '../controls/mobile-number/mobile-number.model';
 import { AcceptTerms } from '../controls/accept-terms/accept-terms.model';
-import { AccountService } from '../_services';
+import { AccountService } from '../services';
 
 export interface RegisterPayload
   extends HonorificsData, FirstLast, EmailAndDob, PasswordConfirm, MobileNumber, AcceptTerms {}

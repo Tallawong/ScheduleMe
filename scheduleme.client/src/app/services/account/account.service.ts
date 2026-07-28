@@ -5,23 +5,23 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { finalize, map } from 'rxjs/operators';
 
 //import { environment } from '@environments/environment';
-import { Account, Role } from '../_models';
-import { RegisterRequest } from '../requests/register-request';
-import { ForgotPasswordRequest } from '../requests/forgot-password-request';
-import { ResetPasswordRequest } from '../requests/reset-password-request';
+import { Account, Role } from '../../schedule-models';
+import { RegisterRequest } from '../../requests/register-request';
+import { ForgotPasswordRequest } from '../../requests/forgot-password-request';
+import { ResetPasswordRequest } from '../../requests/reset-password-request';
 //import { JwtHelperService } from '@auth0/angular-jwt';
 import { CookieService } from 'ngx-cookie-service';
 
 //import { environment } from '../environments/environment';
-import { AgentTaskConfig } from '../_models/agenttaskconfig';
-import { Schedule } from '../_models/schedule';
-import { ScheduleDateTimes } from '../_models/scheduledatetimes';
-import { SchedulePoolElement } from '../_models/schedulepoolelement';
-import { SchedulePoolElements } from '../_models/schedulepoolelements';
-import { Task } from '../_models/task';
-import { DateFunctionTeams } from '../_models/teams';
-import { TimeSlotsTasksDTO } from '../_models/timeslotstasksDTO';
-import { environment } from '../../environments/environment.development';
+import { AgentTaskConfig } from '../../schedule-models/agenttaskconfig';
+import { Schedule } from '../../schedule-models/schedule';
+import { ScheduleDateTimes } from '../../schedule-models/scheduledatetimes';
+import { SchedulePoolElement } from '../../schedule-models/schedulepoolelement';
+import { SchedulePoolElements } from '../../schedule-models/schedulepoolelements';
+import { Task } from '../../schedule-models/task';
+import { DateFunctionTeams } from '../../schedule-models/teams';
+import { TimeSlotsTasksDTO } from '../../schedule-models/timeslotstasksDTO';
+import { environment } from '../../../environments/environment.development';
 
 const baseUrl = `${environment.apiUrl}/accounts`;
 

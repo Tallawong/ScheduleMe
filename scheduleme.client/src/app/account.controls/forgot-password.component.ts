@@ -3,7 +3,7 @@ import { Component, EventEmitter, Input, OnInit, OnDestroy, Output } from '@angu
 import { FormsModule } from '@angular/forms';
 import { finalize } from 'rxjs';
 //import { UserService } from '../services/user.service';
-import { AccountService } from '../_services';
+import { AccountService } from '../services';
 
 @Component({
   standalone: true,

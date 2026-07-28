@@ -1,6 +1,6 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { RouterModule, Router } from '@angular/router';
-import { TokenService } from '../_services/token.service';
+import { TokenService } from '../services/token/token.service';
 
 @Component({
   standalone: true,

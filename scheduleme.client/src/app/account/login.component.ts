@@ -4,7 +4,7 @@ import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { first } from 'rxjs/operators';
 
-import { AccountService, AlertService } from '../_services';
+import { AccountService, AlertService } from '../services';
 
 @Component({
   templateUrl: 'login.component.html',

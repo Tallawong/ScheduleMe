@@ -4,7 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 //import { UserService } from '../services/user.service';
 import { VerifyEmailRequest } from '../requests/verify-email-request';
 import { AccountModalService } from './account-modal.service';
-import { AccountService } from '../_services';
+import { AccountService } from '../services';
 
 @Component({
   standalone: true,
