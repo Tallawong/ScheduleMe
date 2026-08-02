@@ -22,7 +22,7 @@
       "type": "chrome",
       "request": "launch",
       "preLaunchTask": "npm: test",
-      "url": "http://parish.api:9876/debug.html"
+      "url": "http://rejkid.api:9876/debug.html"
     },
     {
       "name": "Attach to rejkid.api (port 9222)",
