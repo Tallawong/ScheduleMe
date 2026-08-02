@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { LoginPromptComponent } from './login-prompt.component';
 import { RegisterDialogComponent } from './register-dialog.component';
 import { VerifyEmailComponent } from './verify-email.component';
 import { ForgotPasswordComponent } from './forgot-password.component';
@@ -7,7 +8,7 @@ import { ResetPasswordComponent } from './reset-password.component';
 export const ACCOUNT_ROUTES: Routes = [
   {
     path: 'login',
-    loadComponent: () => import('./login-prompt.component').then((m) => m.LoginPromptComponent),
+    component: LoginPromptComponent,
   },
   {
     path: 'register',

@@ -53,7 +53,7 @@ namespace WebApi
                 {
                     webBuilder.UseStartup<Startup>()
                     .UseContentRoot(Directory.GetCurrentDirectory())
-                    .UseUrls("https://parish.api:5002");
+                    .UseUrls("https://rejkid.api:5002");
                     /*
                      * 1) dotnet dev-certs https --trust
                      * 2) dotnet dev-certs https --clean

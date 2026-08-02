@@ -1,5 +1,7 @@
 {
   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  // For testing purpose we might run browser connecting with the string:
+  // "C:\Program Files\Google\Chrome\Application\chrome.exe" --remote-debugging-port=9222 --user-data-dir="C:\ChromeDebugProfile" https://rejkid.api:4200
   "version": "0.2.0",
   "configurations": [
     {
@@ -7,7 +9,13 @@
       "type": "chrome",
       "request": "launch",
       "preLaunchTask": "npm: start:dev",
-      "url": "https://rejkid.api:4200/"
+      "url": "https://rejkid.api:4200/",
+      "webRoot": "C:\\Workspace\\ScheduleMeSolution\\scheduleme.client",
+      "sourceMapPathOverrides": {
+        "https://rejkid.api:4200/src/*": "C:\\Workspace\\ScheduleMeSolution\\scheduleme.client\\src\\*",
+        "/src/*": "C:\\Workspace\\ScheduleMeSolution\\scheduleme.client\\src\\*",
+        "src/*": "C:\\Workspace\\ScheduleMeSolution\\scheduleme.client\\src\\*"
+      }
     },
     {
       "name": "ng test",
@@ -15,6 +23,19 @@
       "request": "launch",
       "preLaunchTask": "npm: test",
       "url": "http://parish.api:9876/debug.html"
+    },
+    {
+      "name": "Attach to rejkid.api (port 9222)",
+      "type": "chrome",
+      "request": "attach",
+      "port": 9222,
+      "url": "https://rejkid.api:4200/*",
+      "webRoot": "C:\\Workspace\\ScheduleMeSolution\\scheduleme.client",
+      "sourceMapPathOverrides": {
+        "https://rejkid.api:4200/src/*": "C:\\Workspace\\ScheduleMeSolution\\scheduleme.client\\src\\*",
+        "/src/*": "C:\\Workspace\\ScheduleMeSolution\\scheduleme.client\\src\\*",
+        "src/*": "C:\\Workspace\\ScheduleMeSolution\\scheduleme.client\\src\\*"
+      }
     }
   ]
 }

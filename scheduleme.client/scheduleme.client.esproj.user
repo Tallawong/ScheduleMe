@@ -3,11 +3,17 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebuggerFlavor>LaunchJsonDebugger</DebuggerFlavor>
     <LaunchJsonTarget>{
-  "name": "ng serve",
+  "name": "Attach to rejkid.api (port 9222)",
   "type": "chrome",
-  "request": "launch",
-  "url": "https://rejkid.api:4200/",
-  "preLaunchTask": "npm: start:dev"
+  "request": "attach",
+  "url": "https://rejkid.api:4200/*",
+  "webRoot": "C:\\Workspace\\ScheduleMeSolution\\scheduleme.client",
+  "port": 9222,
+  "sourceMapPathOverrides": {
+    "https://rejkid.api:4200/src/*": "C:\\Workspace\\ScheduleMeSolution\\scheduleme.client\\src\\*",
+    "/src/*": "C:\\Workspace\\ScheduleMeSolution\\scheduleme.client\\src\\*",
+    "src/*": "C:\\Workspace\\ScheduleMeSolution\\scheduleme.client\\src\\*"
+  }
 }</LaunchJsonTarget>
   </PropertyGroup>
 </Project>

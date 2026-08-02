@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './core/controls/home';
 import { AuthGuard } from './core/helpers';
+import { ACCOUNT_ROUTES } from './account.controls/account.routes';
 
 // const adminModule = () => import('./admin/admin.module').then((x) => x.AdminModule);
 // const profileModule = () => import('./profile/profile.module').then((x) => x.ProfileModule);
@@ -11,7 +12,7 @@ export const routes: Routes = [
   { path: '', redirectTo: 'account/login', pathMatch: 'full' },
   {
     path: 'account',
-    loadChildren: () => import('./account.controls/account.routes').then((m) => m.ACCOUNT_ROUTES),
+    children: ACCOUNT_ROUTES,
   },
   /*{ path: '', component: HomeComponent, canActivate: [AuthGuard]},
   
