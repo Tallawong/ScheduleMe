@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.VisualStudio.JavaScript.Sdk/1.0.5581896">
+<Project Sdk="Microsoft.VisualStudio.JavaScript.Sdk/1.0.5581896">
   <PropertyGroup>
     <StartupCommand>npm run start:dev</StartupCommand>
     <JavaScriptTestFramework>Jasmine</JavaScriptTestFramework>
@@ -6,6 +6,6 @@
     <ShouldRunBuildScript>false</ShouldRunBuildScript>
     <!-- Folder where production build objects will be placed -->
     <BuildOutputFolder>$(MSBuildProjectDirectory)\dist\scheduleme.client\browser\</BuildOutputFolder>
-    <StartupCommandWorkingDirectory>C:\Workspace\ScheduleMeSolution\scheduleme.client</StartupCommandWorkingDirectory>
+    <StartupCommandWorkingDirectory>$(MSBuildProjectDirectory)</StartupCommandWorkingDirectory>
   </PropertyGroup>
 </Project>

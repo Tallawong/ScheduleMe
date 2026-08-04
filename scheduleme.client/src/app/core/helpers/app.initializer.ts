@@ -1,37 +1,31 @@
-import { TeardownLogic } from 'rxjs';
-//import { environment } from 'src/environments/environment';
 import { AccountService } from '../../services';
 
-export function appInitializer(accountService: AccountService) {
+export function initializeApp(accountService: AccountService) {
   return () =>
     new Promise((resolve: any) => {
       // attempt to refresh token on app start up to auto authenticate
-      //alert("Failed refreshing");
+      alert("Failed refreshing");
       accountService
         .refreshToken()
         .subscribe({
           next: (value: any) => {
             console.log(
-              'appInitializer successful: ' + value.firstName,
+              'initializeApp successful: ' + value.firstName,
               value.lastName,
               value.email,
             );
           },
           error: (error: string) => {
-            console.log('Error in appInitializer');
+            console.log('Error in initializeApp');
           },
         })
         .add(resolve);
     })
       .then((message) => {
-        console.log('appInitializer in then');
+        console.log('initializeApp in then');
       })
       .catch((message) => {
-        console.log('Error in appInitializer in catch');
+        console.log('Error in initializeApp in catch');
       });
 }
 
-/* export function appInitializer(accountService: AccountService) {
-      // attempt to refresh token on app start up to auto authenticate
-      return () => accountService.refreshToken();
-} */

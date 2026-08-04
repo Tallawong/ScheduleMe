@@ -1,44 +1,57 @@
-import { Injectable } from '@angular/core';
-import { HttpRequest, HttpHandler, HttpEvent, HttpInterceptor, HttpContextToken, HttpErrorResponse } from '@angular/common/http';
-import { EMPTY, Observable, of, throwError } from 'rxjs';
+import { inject } from '@angular/core';
+import { HttpErrorResponse, HttpInterceptorFn } from '@angular/common/http';
+import { throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
 import { AccountService } from '../../services';
 
-@Injectable()
-export class ErrorInterceptor implements HttpInterceptor {
-    constructor(private accountService: AccountService) { }
+export const authInterceptor: HttpInterceptorFn = (req, next) => {
+  let accountService = inject(AccountService);
+  return next(req).pipe(catchError((err: unknown) => {
+    const message = getErrorMessage(err);
 
-    intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-        return next.handle(request).pipe(catchError(err => {
-            if ([401, 403].includes(err.status) && this.accountService.accountValue) {
-                // auto logout if 401 or 403 response returned from api
-                this.accountService.logout();
-            }
-            var erro = this.error(err);
-            console.error("ErrorInterceptor: " + erro);
-            throw erro;
-            
-        }))
+    if (isHttpErrorResponse(err) && [401, 403].includes(err.status) && accountService.accountValue) {
+      // auto logout if 401 or 403 response returned from api
+      accountService.logout();
     }
-    
-    error(e: any): any {
-        if (this.isPrimitive(e)) {
-            return e;
-        } else if (e.error) {
-            // If e.error is an object error
-            return this.error(e.error);
-        } else if (e.message) {
-            return e.message
-        } else if (e.errorMessage) {
-            return e.errorMessage
-        } else if (e.title) {
-            return e.title
-        } else {
-            return "Unknown Error";
-        }
-    }
-    isPrimitive(test: any) {
-        return test !== Object(test);
-    }
+    console.error('ErrorInterceptor:', message, err);
+    return throwError(() => err);
+
+  }))
+
+
+};
+
+function getErrorMessage(err: unknown): string {
+  if (err == null) {
+    return 'Unknown Error';
+  }
+
+  if (typeof err === 'string') {
+    return err;
+  }
+
+  if (typeof err === 'number' || typeof err === 'boolean') {
+    return String(err);
+  }
+
+  if (err instanceof Error) {
+    return err.message || err.name || 'Unknown Error';
+  }
+
+  if (typeof err !== 'object') {
+    return 'Unknown Error';
+  }
+
+  const e = err as Record<string, any>;
+
+  if (e['error']) {
+    return getErrorMessage(e['error']);
+  }
+
+  return e['errorMessage'] || e['title'] || e['message'] || e['statusText'] || 'Unknown Error';
+}
+
+function isHttpErrorResponse(err: unknown): err is HttpErrorResponse {
+  return err instanceof HttpErrorResponse;
 }
