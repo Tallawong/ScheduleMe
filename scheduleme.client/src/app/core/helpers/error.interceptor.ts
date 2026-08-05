@@ -5,7 +5,7 @@ import { catchError } from 'rxjs/operators';
 
 import { AccountService } from '../../services';
 
-export const authInterceptor: HttpInterceptorFn = (req, next) => {
+export const errorInterceptor: HttpInterceptorFn = (req, next) => {
   let accountService = inject(AccountService);
   return next(req).pipe(catchError((err: unknown) => {
     const message = getErrorMessage(err);

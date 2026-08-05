@@ -37,6 +37,7 @@ export interface RegisterPayload
     MobileNumberComponent,
     RegistrationFormComponent,
     AcceptTermsComponent,
+    
   ],
   templateUrl: './register-dialog.component.html',
 })

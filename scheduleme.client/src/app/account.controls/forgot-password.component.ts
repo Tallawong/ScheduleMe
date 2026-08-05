@@ -13,10 +13,10 @@ import { AccountService } from '../services';
   styleUrls: ['./forgot-password.component.css'],
 })
 export class ForgotPasswordComponent implements OnInit {
-  @Input() visible: boolean = true;
   @Output() cancelled = new EventEmitter<void>();
   @Output() submitted = new EventEmitter<{ email: string; dob: string }>();
 
+  visible: boolean = true;
   model = { email: '', dob: '' };
   // `dobDate` is the Date selected via material datepicker.
   dobDate: Date | null = null;

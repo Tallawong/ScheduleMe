@@ -4,8 +4,10 @@ import { provideRouter, withComponentInputBinding } from '@angular/router';
 import { routes } from './app.routes';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { AccountService } from './services';
-import { authInterceptor, initializeApp } from './core/helpers';
 import { CookieService } from 'ngx-cookie-service';
+import { initializeApp } from './core/helpers/app.initializer';
+import { errorInterceptor } from './core/helpers/error.interceptor';
+import { jwtInterceptor } from './core/helpers/jwt.interceptor';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -16,7 +18,7 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes, withComponentInputBinding()),
 
     provideHttpClient(
-      withInterceptors([authInterceptor, authInterceptor]) // Register interceptor here
+      withInterceptors([jwtInterceptor, errorInterceptor]) // Register interceptors here
     ),
     CookieService,
     // Standard Modern Syntax (Angular 18+)

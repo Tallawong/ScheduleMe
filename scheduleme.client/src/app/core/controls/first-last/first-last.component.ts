@@ -1,8 +1,9 @@
 import { first } from 'rxjs/operators';
 import { CommonModule } from '@angular/common';
-import { Component, model, signal } from '@angular/core';
+import { Component, model } from '@angular/core';
 import { AbstractControl, FormControl, FormsModule } from '@angular/forms';
 import { buildAccountSection, FirstLast } from './first-last.model';
+import {  FormRoot } from '@angular/forms/signals';
 import {
   form,
   FormField,
@@ -41,7 +42,7 @@ function firstLastValidator(
 @Component({
   selector: 'app-first-last',
   standalone: true,
-  imports: [CommonModule, FormsModule, FormField],
+  imports: [CommonModule, FormsModule, FormField, FormRoot],
   templateUrl: './first-last.component.html',
   styleUrl: './first-last.component.css',
 })
